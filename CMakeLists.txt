@@ -5,8 +5,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Sanitizers 
-add_compile_options(-g -fsanitize=address -fsanitize=undefined)
-add_link_options(-fsanitize=address -fsanitize=undefined)
+#add_compile_options(-g -fsanitize=address -fsanitize=undefined)
+#add_link_options(-fsanitize=address -fsanitize=undefined)
 
 # Encapsulación y módulos
 add_library(solution src/solution.cpp)

@@ -30,5 +30,5 @@ int Solution::search(const std::vector<int>& nums, int target) {
         }
     }
 
-    return -1; 
+    return -1;
 }
