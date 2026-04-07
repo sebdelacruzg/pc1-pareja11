@@ -5,7 +5,7 @@
 
 #### BLOQUE 4
 
-## 1. ¿Qué diferencia observable deja demo_const_refs.cpp entre lectura, modificación y copia?
+ 1. ¿Qué diferencia observable deja demo_const_refs.cpp entre lectura, modificación y copia?
 
 La diferencia es cómo las distintas funciones afectan (o no) al espacio de memoria del vector original:
 
@@ -24,7 +24,7 @@ La diferencia es cómo las distintas funciones afectan (o no) al espacio de memo
   Cambios en `copied` no afectan a `original`.
 
 
-## 2. En bench_vector_growth.cpp, ¿qué cambia con reserve?
+ 2. En bench_vector_growth.cpp, ¿qué cambia con reserve?
 
 Lo que cambia es la gestión y reasignación de memoria dinámica:
 
@@ -35,7 +35,7 @@ Lo que cambia es la gestión y reasignación de memoria dinámica:
   Más rápido. Se asigna toda la memoria necesaria desde el inicio, evitando realocaciones costosas.
 
 
-## 3. En bench_vector_ops.cpp, ¿por qué push_back, insert(begin()) e insert(middle) no cuestan lo mismo?
+ 3. En bench_vector_ops.cpp, ¿por qué push_back, insert(begin()) e insert(middle) no cuestan lo mismo?
 
 Porque `std::vector` almacena elementos de forma contigua en memoria:
 
@@ -49,7 +49,7 @@ Porque `std::vector` almacena elementos de forma contigua en memoria:
   El más lento. Debe mover todos los elementos en cada inserción.
 
 
-## 4. En bench_cache_effects.cpp, ¿qué intuición deja sobre localidad de memoria?
+ 4. En bench_cache_effects.cpp, ¿qué intuición deja sobre localidad de memoria?
 
 Demuestra que el rendimiento depende de cómo la CPU interactúa con la caché:
 
@@ -65,7 +65,7 @@ Demuestra que el rendimiento depende de cómo la CPU interactúa con la caché:
 
 #### BLOQUE 5
 
-## 1. Según Ejercicios0.md, ¿cuál es el orden correcto antes de optimizar?
+ 1. Según Ejercicios0.md, ¿cuál es el orden correcto antes de optimizar?
 
 1. Elegir el algoritmo correcto.  
 2. Verificar la correctitud del código.  
@@ -73,7 +73,7 @@ Demuestra que el rendimiento depende de cómo la CPU interactúa con la caché:
 4. Aplicar optimizaciones de compilador (`-O2`, `-O3`, etc.).
 
 
-## 2. ¿Qué quiere mostrar stl_optimizacion_demostracion.cpp?
+ 2. ¿Qué quiere mostrar stl_optimizacion_demostracion.cpp?
 
 Que el diseño algorítmico supera al microajuste del compilador:
 
@@ -83,7 +83,7 @@ Que el diseño algorítmico supera al microajuste del compilador:
 - **lower_bound:** Búsqueda binaria en `O(log n)` con alta eficiencia de caché.
 
 
-## 3. ¿Qué tipo de evidencia puede producir resolver_ejercicios0_v4.2.sh?
+ 3. ¿Qué tipo de evidencia puede producir resolver_ejercicios0_v4.2.sh?
 
 - **Reporte final:** Markdown con tablas comparativas.  
 - **Métricas:** Tiempos de ejecución y tamaño de binarios.  
@@ -91,7 +91,7 @@ Que el diseño algorítmico supera al microajuste del compilador:
 - **Artefactos avanzados:** Coverage (`gcov`) y profiling (`gprof`).
 
 
-## 4. ¿Qué limitaciones de entorno menciona INSTRUCCIONES_Ejercicios0_v4.2.md?
+ 4. ¿Qué limitaciones de entorno menciona INSTRUCCIONES_Ejercicios0_v4.2.md?
 
 Entornos como Git Bash o MSYS2 presentan limitaciones:
 
@@ -104,7 +104,7 @@ Se recomienda:
 - O migrar a **WSL/Linux nativo** para herramientas avanzadas.
 
 
-## 5. ¿Por qué esta parte no reemplaza la discusión de correctitud de Semana 1?
+ 5. ¿Por qué esta parte no reemplaza la discusión de correctitud de Semana 1?
 
 - **Semana 0 (Herramientas):**  
   Correctitud mecánica/dinámica.  
