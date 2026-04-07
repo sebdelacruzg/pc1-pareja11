@@ -111,16 +111,49 @@ El arrastre del estado (prev) demuestra cómo evitar el recálculo masivo de sub
 
 El uso de std::bitset hace visualmente obvio que el algoritmo iterará como máximo la cantidad de bits del tipo de dato (ej. 32 veces), operando en tiempo O(1), sin importar si el número es 10 o 1,000,000.
 
+#### BLOQUE 3
+
+1. ¿Qué funciones o ideas están verificando las pruebas públicas?
+
+Están verificando la correctitud de casos base o "felices" para algoritmos matemáticos (potencias, Fibonacci, MCM), recursivos (Hanói, Inversión), y de búsqueda/ordenamiento (Bubble Sort, Max).
 
 
+2. ¿Qué sí demuestra una prueba pública?
+
+Demuestra únicamente que el código no se rompe y produce la respuesta correcta para las entradas exactas y limitadas que el profesor escribió en el test (ej. fib(10) == 55).
 
 
+3. ¿Qué no demuestra una prueba pública?
+
+No demuestra la correctitud matemática universal (puede fallar con casos borde, negativos, o listas inmensas) y no demuestra la eficiencia teórica (un código O(2^n) y uno O(1) pueden pasar la misma prueba).
 
 
+4. Elijan una pregunta de preguntas_semana1.md y respóndanla bien. 
+
+Notaciones Asintóticas y Casos
+
+- **O grande:** El "techo" (peor escenario); el algoritmo no tardará más que esto.  
+- **Ω grande:** El "piso" (mejor escenario); el algoritmo tardará al menos esto.  
+- **Θ grande:** Límite exacto; ocurre cuando el "techo" y el "piso" coinciden.  
+
+- **Peor caso:** La entrada que obliga al algoritmo a hacer el máximo trabajo posible.  
+- **Mejor caso:** La entrada que requiere el mínimo trabajo posible.  
+- **Caso promedio:** El tiempo esperado considerando estadísticamente todas las entradas posibles.  
+
+**¿Por qué dos correctos no son iguales?**  
+Porque uno puede resolver el problema en microsegundos (O(n)) y el otro, aunque correcto, tardar milenios (O(2^n)).
+
+**Crecimiento de Bubble Sort:**  
+Es cuadrático (O(n^2)). Si duplicas los datos a ordenar, el tiempo de espera se multiplica por cuatro.
 
 
+5. Autoevaluación (Nivel: Logrado)
 
+- **Comprensión conceptual:** Definimos con claridad y sin ambigüedades O, Ω, Θ y los tipos de casos.  
 
+- **Sustentación de correctitud:** Entendimos perfectamente la limitación de probar con asserts aislados versus la garantía teórica universal.  
+
+- **Análisis de eficiencia:** Relacionamos matemáticamente el costo de Bubble Sort (O(n^2)) con su impacto físico.
 
 
 #### BLOQUE 4
