@@ -8,16 +8,16 @@
 1. Diferencia entre problema, algoritmo, ADT e implementación
 
 - **Problema:**  
-  Qué se quiere resolver (ej. ordenar datos).
+  El problema sería lo que se quiere hacer, pero sin detalles de como(ej. ordenar datos).
 
 - **Algoritmo:**  
-  Secuencia de pasos matemáticos o lógicos para resolver el problema.
+  El algoritmo sería el plan para resolverlo usando pasos concretos y un procedimiento lógico. Secuencia de pasos matemáticos para resolver el problema.
 
 - **ADT (Abstract Data Type):**  
-  El contrato o interfaz (operaciones permitidas), sin importar cómo se almacenan los datos.
+  Son tipos de datos que pueden participar en las soluciones de un problema. El contrato o interfaz (operaciones permitidas), sin importar cómo se almacenan los datos.
 
 - **Implementación:**  
-  El código real (estructuras de datos en memoria, lenguaje específico).
+  La implementación es el programa real que ejecuta algoritmo y ADT, se materializa en memoria, datos e instrucciones. El código real (estructuras de datos en memoria, lenguaje específico).
 
 
 2. En `bubble_sort.cpp`, ¿qué observable conecta correctitud y costo?
@@ -36,7 +36,8 @@ La versión optimizada aprovecha esto para reducir el costo, acortando el rango 
 
 
 3. En `power.cpp`, ¿por qué mejora frente a la versión ingenua?
-
+Power es más eficiente porque convierte las operaciones redundantes de multiplicar una vez por cada unidad en n en un proceso logarítmico donde cada paso dobla la base (cuadratura) y consume un bit.
+En la práctica, para grandes n la diferencia es enorme (n vs log n).
 Mejora el rendimiento al pasar de:
 
 - Complejidad lineal: $O(n)$  
