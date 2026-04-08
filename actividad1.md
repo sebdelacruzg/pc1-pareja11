@@ -269,3 +269,20 @@ Se recomienda:
   Requiere razonamiento matemático (invariantes, pruebas, casos).  
 
 > Las herramientas detectan errores, pero no prueban que un algoritmo sea correcto.
+
+#### BLOQUE 6
+
+Afirmación de especificación
+La especificación es una descripción informal del problema (ej. "ordenar un arreglo"), y se defiende que el algoritmo la satisface mediante argumentos lógicos. Con evidencia experimental, se compara cómo implementaciones distintas cumplen la misma especificación en escenarios reales, verificando consistencia observable en pruebas concretas.
+
+Afirmación de correctitud
+La correctitud básica se justifica con invariantes y pruebas formales (ej. "el sufijo queda ordenado"), asegurando que el algoritmo termina con la salida correcta para cualquier entrada válida. La evidencia experimental muestra correctitud en casos probados (ej. asserts en tests), pero no garantiza para todos los inputs posibles, ya que depende de datos específicos y entornos.
+
+Afirmación de costo
+El costo es teórico y asintótico (ej. Θ(n²) para bubble sort), basado en conteo de operaciones. Con evidencia experimental, se mide costo real (tiempo en segundos, operaciones contadas) en benchmarks, revelando diferencias prácticas entre implementaciones (ej. powerBF vs power en tiempo de ejecución).
+
+Afirmación de representación o memoria
+La representación es abstracta (ADT como IntSequence), enfocada en operaciones sin detalles internos. Experimentalmente, se compara cómo representaciones concretas (arreglo fijo vs std::vector) afectan uso de memoria (ej. capacidad vs tamaño real), mostrando trade-offs en crecimiento dinámico o límites fijos.
+
+Advertencia metodológica
+La evidencia experimental es contextual y dependiente del entorno (máquina, compilador, datos de prueba), por lo que no es universal ni reemplaza el análisis teórico; puede ocultar fallos en casos no probados o variar con hardware, mientras que la correctitud básica es formal y general.
