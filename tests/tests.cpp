@@ -29,7 +29,7 @@ void test_search_in_rotated_array() {
         assert(sol.search(nums, 1) == 0 && "Fallo en array de 1 elemento, encontrado");
     }
 
-    // Caso Borde diseñado por la pareja (Rotación de 0, array normal)
+    // Caso Borde (Rotación de 0, array normal)
     {
         std::vector<int> nums = {1, 2, 3, 4, 5};
         assert(sol.search(nums, 5) == 4 && "Fallo en array sin rotar");
